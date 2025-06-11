@@ -16,6 +16,10 @@ return {
 		"tpope/vim-rhubarb",
 	},
 	{
+		-- diff open vim
+		"sindrets/diffview.nvim",
+	},
+	{
 		-- autoclose parentheses, brackets, quotes, etc.
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",

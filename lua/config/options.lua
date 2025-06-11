@@ -56,15 +56,3 @@ vim.opt.scrolloff = 10
 
 -- disable command line until its needed
 vim.opt.cmdheight = 0
-
--- highlight text for some time after yanking
-vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("YankHighlight", {
-		clear = true,
-	}),
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	desc = "Highlight yank",
-})
