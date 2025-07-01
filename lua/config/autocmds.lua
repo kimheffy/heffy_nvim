@@ -2,14 +2,10 @@ local api = vim.api
 
 -- highlight text for some time after yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("YankHighlight", {
-		clear = true,
-	}),
-	pattern = "*",
+	group = augroup("highlight_yank"),
 	callback = function()
-		vim.highlight.on_yank()
+		(vim.hl or vim.highlight).on_yank()
 	end,
-	desc = "Highlight yank",
 })
 
 -- auto close brackets
