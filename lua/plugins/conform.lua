@@ -8,8 +8,10 @@ return {
 			-- You can customize some of the format options for the filetype (:help conform.format)
 			rust = { "rustfmt", lsp_format = "fallback" },
 			-- Conform will run the first available formatter
-			javascript = { "prettierd", "prettier", stop_after_first = true },
-			typescript = { "prettierd", "prettier", stop_after_first = true },
+			javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
+			javascriptreact = { "biome", "prettierd", "prettier", stop_after_first = true },
+			typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
+			typescriptreact = { "biome", "prettierd", "prettier", stop_after_first = true },
 		},
 		format_on_save = {
 			timeout_ms = 500,

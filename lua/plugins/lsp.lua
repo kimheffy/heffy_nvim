@@ -250,6 +250,7 @@ return {
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
 			"prettierd", -- used to format javascript and typescript
+			"biome", -- used for formatting/linting javascript and typescript apps
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
